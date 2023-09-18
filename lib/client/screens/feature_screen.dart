@@ -45,7 +45,7 @@ class _FeaturesState extends State<Features> {
               imageAsset: appState.isDarkMode
                   ? 'https://i.imgur.com/5MYDzGl.png'
                   : 'https://i.imgur.com/5MYDzGl.png',
-              onTap: () => _navigateTo('/dsa'),
+              onTap: () => _navigateTo('/inventory'),
             ),
             SizedBox(
               width: Dimension.width25,
@@ -53,13 +53,13 @@ class _FeaturesState extends State<Features> {
             _buildFeatureContainer(
               titleText: "Wool Quality",
               imageAsset: 'https://i.imgur.com/10FFINf.png',
-              onTap: () => _navigateTo('/dsa'),
+              onTap: () => _navigateTo('/woolquality'),
             ),
             SizedBox(width: Dimension.width25),
             _buildFeatureContainer(
               titleText: "Marketplace",
               imageAsset: 'https://i.imgur.com/I6dEne0.png',
-              onTap: () => _navigateTo('/dsa'),
+              onTap: () => _navigateTo('/marketplace'),
             ),
             _buildFeatureContainer(
               titleText: "Services",

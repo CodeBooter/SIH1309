@@ -8,9 +8,14 @@ import 'package:sih1309/utils/Dimensions.dart';
 import '../../app_state.dart';
 import '../../utils/Colors.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class WoolQuality extends StatefulWidget {
+  const WoolQuality({super.key});
 
+  @override
+  State<WoolQuality> createState() => _WoolQualityState();
+}
+
+class _WoolQualityState extends State<WoolQuality> {
   Widget build(BuildContext context) {
     final appState = Provider.of<AppState>(context);
     return Scaffold(
@@ -23,7 +28,7 @@ class NewsScreen extends StatelessWidget {
           ),
           toolbarHeight: Dimension.val70,
           centerTitle: true,
-          title: Text("Live News",
+          title: Text("Wool Quality",
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'poppins',
@@ -31,6 +36,8 @@ class NewsScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               )),
         ),
-        body: const NewsApi());
+        body: Center(
+          child: Text("This is wool quality"),
+        ));
   }
 }
