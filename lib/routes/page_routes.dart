@@ -15,6 +15,7 @@ import '../client/screens/inventory/inventory_management.dart';
 import '../client/screens/marketplace/Tools.dart';
 import '../client/screens/marketplace/marketplace_screen.dart';
 import '../client/screens/notifications_screen.dart';
+import '../client/screens/services_screen.dart';
 
 class App extends StatelessWidget {
   App({Key? key}) : super(key: key);
@@ -62,9 +63,15 @@ class App extends StatelessWidget {
                   const NotificationScreen(),
             ),
             GoRoute(
+
+                path: 'Learning',
+                builder: (BuildContext context, GoRouterState state) =>
+                    const YoutubeScreen()),
+            GoRoute(
+
               path: 'inventory',
               builder: (BuildContext context, GoRouterState state) =>
-                  const InventoryMgmnt(),
+                  InventoryMgmnt(),
             ),
             GoRoute(
               path: 'woolquality',
@@ -75,6 +82,7 @@ class App extends StatelessWidget {
               path: 'marketplace',
               builder: (BuildContext context, GoRouterState state) =>
                   const MarketPlace(),
+
               routes: [
                 GoRoute(path: 'Tools',
                   builder: (BuildContext context, GoRouterState state) =>
@@ -91,6 +99,13 @@ class App extends StatelessWidget {
 
 
               ]
+
+            ),
+            GoRoute(
+              path: 'services',
+              builder: (BuildContext context, GoRouterState state) =>
+                  Services(),
+
             ),
           ],
           path: '/',
