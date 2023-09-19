@@ -1,5 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+
+import 'package:sih1309/client/screens/news_api.dart';
+import 'package:sih1309/utils/dimensions.dart';
+
+import '../../app_state.dart';
+import '../../utils/colors.dart';
+
 import 'package:sih1309/app_state.dart';
 import 'package:sih1309/utils/Colors.dart';
 import 'package:sih1309/utils/Dimensions.dart';

@@ -5,10 +5,15 @@ import 'package:flutter/widgets.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 import 'package:sih1309/client/screens/news_api.dart';
+
+import 'package:sih1309/utils/dimensions.dart';
+
+
 import '../../../utils/dimensions.dart';
 import 'package:pie_chart/pie_chart.dart';
+
 import '../../../app_state.dart';
-import '../../../utils/Colors.dart';
+import '../../../utils/colors.dart';
 
 class InventoryMgmnt extends StatefulWidget {
   InventoryMgmnt({super.key});
@@ -27,6 +32,7 @@ class _InventoryMgmntState extends State<InventoryMgmnt> {
   final double runSpacing = Dimension.val25;
   final Duration tapDelay = const Duration(milliseconds: 200);
   Widget build(BuildContext context) {
+
     Map<String, double> dataMap = {
       "Filled": 80,
       "Empty": 20,
@@ -51,6 +57,10 @@ class _InventoryMgmntState extends State<InventoryMgmnt> {
                 fontWeight: FontWeight.w500,
               )),
         ),
+
+        body: Center(
+          child: Text("This is inventro"),
+
         body: Padding(
           padding: EdgeInsets.all(Dimension.width20),
           child: Column(
@@ -203,6 +213,7 @@ class _InventoryMgmntState extends State<InventoryMgmnt> {
               )
             ],
           ),
+
         ));
   }
 

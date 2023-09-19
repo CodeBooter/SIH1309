@@ -5,7 +5,8 @@ import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
 
 import '../../app_state.dart';
-import '../../utils/Colors.dart';
+import '../../utils/colors.dart';
+import '../../utils/colors.dart';
 import '../../utils/dimensions.dart';
 
 class AnimatedDrawer extends StatelessWidget {

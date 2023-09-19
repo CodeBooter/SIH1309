@@ -6,7 +6,7 @@ import 'package:provider/provider.dart';
 import 'package:intl/intl.dart';
 
 import '../../app_state.dart';
-import '../../utils/Dimensions.dart';
+import '../../utils/dimensions.dart';
 import '../../utils/colors.dart';
 
 class NewsArticle {
