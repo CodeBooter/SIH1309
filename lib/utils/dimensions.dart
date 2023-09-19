@@ -38,9 +38,13 @@ class Dimension {
   static double get width210 => Get.width / 1.9; //210
   static double get width200 => Get.width / 2.02; //200
   static double get width190 => Get.width / 2.14; //190
-  static double get width182 => Get.width / 2.19; //182
+
   static double get width181 => Get.width / 2.2; //181
   static double get width185 => Get.width / 2.19; //185
+  static double get width184 => Get.width / 2.2; //184
+  static double get width183 => Get.width / 2.2; //183
+
+  static double get width182 => Get.width / 2.19; //182
   static double get width180 => Get.width / 2.4; //180
   static double get width175 => Get.width / 2.45; //175
   static double get width170 => Get.width / 2.5; //170

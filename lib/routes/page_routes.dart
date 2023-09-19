@@ -10,13 +10,13 @@ import 'package:sih1309/client/screens/short_screen.dart';
 
 import 'package:sih1309/client/screens/wool_quality.dart';
 
-
 import '../app_state.dart';
 import '../client/home/home_screen.dart';
 import '../client/screens/error_screen.dart';
 import '../client/screens/inventory/inventory_management.dart';
 import '../client/screens/marketplace/marketplace_screen.dart';
 import '../client/screens/notifications_screen.dart';
+import '../client/screens/services_screen.dart';
 
 class App extends StatelessWidget {
   App({Key? key}) : super(key: key);
@@ -64,17 +64,13 @@ class App extends StatelessWidget {
                   const NotificationScreen(),
             ),
             GoRoute(
-
-              path: 'Learning',
+                path: 'Learning',
                 builder: (BuildContext context, GoRouterState state) =>
-                const YoutubeScreen()
-            ),
-             GoRoute(
-
-
+                    const YoutubeScreen()),
+            GoRoute(
               path: 'inventory',
               builder: (BuildContext context, GoRouterState state) =>
-                  const InventoryMgmnt(),
+                  InventoryMgmnt(),
             ),
             GoRoute(
               path: 'woolquality',
@@ -86,7 +82,11 @@ class App extends StatelessWidget {
               builder: (BuildContext context, GoRouterState state) =>
                   const MarketPlace(),
             ),
-
+            GoRoute(
+              path: 'services',
+              builder: (BuildContext context, GoRouterState state) =>
+                  Services(),
+            ),
           ],
           path: '/',
           builder: (BuildContext context, GoRouterState state) {
