@@ -3,10 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sih1309/client/screens/learning_screen.dart';
-import 'package:sih1309/client/screens/news_api.dart';
 import 'package:sih1309/client/screens/news_screen.dart';
+import 'package:sih1309/client/screens/shortScreens/inventoryShorts.dart';
+import 'package:sih1309/client/screens/shortScreens/marketplace_shorts.dart';
+import 'package:sih1309/client/screens/shortScreens/short_screen.dart';
+import 'package:sih1309/client/screens/shortScreens/wool_shorts.dart';
 
-import 'package:sih1309/client/screens/short_screen.dart';
+
 
 import 'package:sih1309/client/screens/wool_quality.dart';
 
@@ -67,7 +70,7 @@ class App extends StatelessWidget {
 
               path: 'Learning',
                 builder: (BuildContext context, GoRouterState state) =>
-                const YoutubeScreen()
+                const LearningScreen()
             ),
              GoRoute(
 
@@ -85,6 +88,26 @@ class App extends StatelessWidget {
               path: 'marketplace',
               builder: (BuildContext context, GoRouterState state) =>
                   const MarketPlace(),
+            ),
+            GoRoute(
+              path: 'inventoryvideo',
+              builder: (BuildContext context, GoRouterState state) =>
+              const InventoryShorts(),
+            ),
+            GoRoute(
+              path: 'woolvedio',
+              builder: (BuildContext context, GoRouterState state) =>
+              const WoolQualityShorts(),
+            ),
+            GoRoute(
+              path: 'marketvideo',
+              builder: (BuildContext context, GoRouterState state) =>
+              const MarketplaceShorts(),
+            ),
+            GoRoute(
+              path: 'shorts',
+              builder: (BuildContext context, GoRouterState state) =>
+              const YoutubeScreen(),
             ),
 
           ],
