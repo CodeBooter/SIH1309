@@ -1,16 +1,17 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 import 'package:sih1309/utils/Dimensions.dart';
 import 'package:youtube_player_flutter/youtube_player_flutter.dart';
 
-class YoutubeScreen extends StatefulWidget {
-  const YoutubeScreen({Key? key}) : super(key: key);
+class InventoryShorts extends StatefulWidget {
+  const InventoryShorts({Key? key}) : super(key: key);
 
   @override
-  _YoutubeScreenState createState() => _YoutubeScreenState();
+  _InventoryShortsState createState() => _InventoryShortsState();
 }
 
-class _YoutubeScreenState extends State<YoutubeScreen> {
+class _InventoryShortsState extends State<InventoryShorts> {
   final List<String> videoIds = [
     'nGvmVpuV0uc', // Replace with your YouTube video IDs
     'P7IKEeK06RY',
@@ -67,13 +68,12 @@ class _YoutubeScreenState extends State<YoutubeScreen> {
           icon: Icon(Icons.arrow_back),
           color: Colors.white,
           onPressed: () {
-            // Navigate back to the homepage
-            Navigator.pop(context);
+            context.go('/Learning');
           },
         ),
         backgroundColor: Colors.transparent, // Make the app bar transparent
         title: const Text(
-          "Shorts",
+          "Inventory Shorts Screen",
           style: TextStyle(color: Colors.white),
         ),
       ),
