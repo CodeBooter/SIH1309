@@ -31,6 +31,9 @@ class NewsScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               )),
         ),
-        body: const NewsApi());
+        body: Center(
+          child: Text("child"),
+        ));
+    // body: const NewsApi());
   }
 }
