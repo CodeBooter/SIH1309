@@ -5,12 +5,17 @@ import 'package:provider/provider.dart';
 import 'package:sih1309/client/screens/news_api.dart';
 import 'package:sih1309/utils/Dimensions.dart';
 
-import '../../app_state.dart';
-import '../../utils/Colors.dart';
+import '../../../app_state.dart';
+import '../../../utils/Colors.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class MarketPlace extends StatefulWidget {
+  const MarketPlace({super.key});
 
+  @override
+  State<MarketPlace> createState() => _MarketPlaceState();
+}
+
+class _MarketPlaceState extends State<MarketPlace> {
   Widget build(BuildContext context) {
     final appState = Provider.of<AppState>(context);
     return Scaffold(
@@ -23,7 +28,7 @@ class NewsScreen extends StatelessWidget {
           ),
           toolbarHeight: Dimension.val70,
           centerTitle: true,
-          title: Text("Live News",
+          title: Text("Marketplace ",
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'poppins',
@@ -32,8 +37,7 @@ class NewsScreen extends StatelessWidget {
               )),
         ),
         body: Center(
-          child: Text("child"),
+          child: Text("This is marketplace"),
         ));
-    // body: const NewsApi());
   }
 }

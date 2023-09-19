@@ -182,11 +182,9 @@ class ArticlePage extends StatelessWidget {
           : AppColors.lightModePrimary,
       appBar: AppBar(
         elevation: 2,
-        backgroundColor: appState.isDarkMode
-            ? AppColors.primaryColor
-            : AppColors.lightModePrimary,
+        backgroundColor: AppColors.lightModePrimary,
         iconTheme: IconThemeData(
-          color: appState.isDarkMode ? Colors.white : Colors.black,
+          color: Colors.black,
         ),
         toolbarHeight: Dimension.val70,
         centerTitle: true,
@@ -228,9 +226,7 @@ class ArticlePage extends StatelessWidget {
               // Article Content
               Text(
                 content,
-                style: TextStyle(
-                  fontSize: 18,
-                ),
+                style: TextStyle(fontSize: 18, color: Colors.black),
               ),
 
               SizedBox(height: 16),
