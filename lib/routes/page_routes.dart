@@ -2,9 +2,14 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sih1309/client/screens/learning_screen.dart';
 import 'package:sih1309/client/screens/news_api.dart';
 import 'package:sih1309/client/screens/news_screen.dart';
+
+import 'package:sih1309/client/screens/short_screen.dart';
+
 import 'package:sih1309/client/screens/wool_quality.dart';
+
 
 import '../app_state.dart';
 import '../client/home/home_screen.dart';
@@ -59,6 +64,14 @@ class App extends StatelessWidget {
                   const NotificationScreen(),
             ),
             GoRoute(
+
+              path: 'Learning',
+                builder: (BuildContext context, GoRouterState state) =>
+                const YoutubeScreen()
+            ),
+             GoRoute(
+
+
               path: 'inventory',
               builder: (BuildContext context, GoRouterState state) =>
                   const InventoryMgmnt(),
@@ -73,6 +86,7 @@ class App extends StatelessWidget {
               builder: (BuildContext context, GoRouterState state) =>
                   const MarketPlace(),
             ),
+
           ],
           path: '/',
           builder: (BuildContext context, GoRouterState state) {
