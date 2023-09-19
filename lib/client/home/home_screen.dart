@@ -127,10 +127,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ],
                   ),
-                  // Container(
-                  //   height: 400, // Set a fixed height for the container
-                  //   child: NewsApi(), // Your NewsApi widget
-                  // ),
+                  Container(
+                    height: 400, // Set a fixed height for the container
+                    child: NewsApi(), // Your NewsApi widget
+                  ),
                 ],
               ),
             ),

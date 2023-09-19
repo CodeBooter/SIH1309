@@ -4,10 +4,13 @@ import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:sih1309/client/screens/news_api.dart';
 import 'package:sih1309/client/screens/news_screen.dart';
+import 'package:sih1309/client/screens/wool_quality.dart';
 
 import '../app_state.dart';
 import '../client/home/home_screen.dart';
 import '../client/screens/error_screen.dart';
+import '../client/screens/inventory/inventory_management.dart';
+import '../client/screens/marketplace/marketplace_screen.dart';
 import '../client/screens/notifications_screen.dart';
 
 class App extends StatelessWidget {
@@ -54,6 +57,21 @@ class App extends StatelessWidget {
               path: 'notifications',
               builder: (BuildContext context, GoRouterState state) =>
                   const NotificationScreen(),
+            ),
+            GoRoute(
+              path: 'inventory',
+              builder: (BuildContext context, GoRouterState state) =>
+                  const InventoryMgmnt(),
+            ),
+            GoRoute(
+              path: 'woolquality',
+              builder: (BuildContext context, GoRouterState state) =>
+                  const WoolQuality(),
+            ),
+            GoRoute(
+              path: 'marketplace',
+              builder: (BuildContext context, GoRouterState state) =>
+                  const MarketPlace(),
             ),
           ],
           path: '/',

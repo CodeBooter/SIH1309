@@ -3,13 +3,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:sih1309/client/screens/news_api.dart';
-import 'package:sih1309/utils/dimensions.dart';
+import 'package:sih1309/utils/Dimensions.dart';
 
-import '../../app_state.dart';
-import '../../utils/colors.dart';
+import '../../../app_state.dart';
+import '../../../utils/Colors.dart';
 
-class NewsScreen extends StatelessWidget {
-  const NewsScreen({super.key});
+class InventoryMgmnt extends StatelessWidget {
+  const InventoryMgmnt({super.key});
 
   Widget build(BuildContext context) {
     final appState = Provider.of<AppState>(context);
@@ -23,7 +23,7 @@ class NewsScreen extends StatelessWidget {
           ),
           toolbarHeight: Dimension.val70,
           centerTitle: true,
-          title: Text("Live News",
+          title: Text("Inventory Management",
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'poppins',
@@ -31,6 +31,8 @@ class NewsScreen extends StatelessWidget {
                 fontWeight: FontWeight.w500,
               )),
         ),
-        body: const NewsApi());
+        body: Center(
+          child: Text("This is inventro"),
+        ));
   }
 }
