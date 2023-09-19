@@ -70,7 +70,7 @@ class _FeaturesState extends State<Features> {
             _buildFeatureContainer(
               titleText: "Learning",
               imageAsset: 'https://i.imgur.com/kNGQdKO.png',
-              onTap: () => _navigateTo('/interview'),
+              onTap: () => _navigateTo('/learning'),
             ),
             SizedBox(width: Dimension.width25),
             _buildFeatureContainer(
