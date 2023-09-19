@@ -2,6 +2,8 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:go_router/go_router.dart';
+import 'package:sih1309/client/screens/marketplace/Feed.dart';
+import 'package:sih1309/client/screens/marketplace/Sheep.dart';
 import 'package:sih1309/client/screens/news_api.dart';
 import 'package:sih1309/client/screens/news_screen.dart';
 import 'package:sih1309/client/screens/wool_quality.dart';
@@ -10,6 +12,7 @@ import '../app_state.dart';
 import '../client/home/home_screen.dart';
 import '../client/screens/error_screen.dart';
 import '../client/screens/inventory/inventory_management.dart';
+import '../client/screens/marketplace/Tools.dart';
 import '../client/screens/marketplace/marketplace_screen.dart';
 import '../client/screens/notifications_screen.dart';
 
@@ -72,6 +75,22 @@ class App extends StatelessWidget {
               path: 'marketplace',
               builder: (BuildContext context, GoRouterState state) =>
                   const MarketPlace(),
+              routes: [
+                GoRoute(path: 'Tools',
+                  builder: (BuildContext context, GoRouterState state) =>
+                  const Tools(),
+                ),
+                GoRoute(path: 'Sheeps',
+                  builder: (BuildContext context, GoRouterState state) =>
+                  const Sheep(),
+                ),
+                GoRoute(path: 'Feed',
+                  builder: (BuildContext context, GoRouterState state) =>
+                  const Feed(),
+                ),
+
+
+              ]
             ),
           ],
           path: '/',

@@ -3,10 +3,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';
 import 'package:sih1309/client/screens/news_api.dart';
-import 'package:sih1309/utils/Dimensions.dart';
+import 'package:sih1309/utils/dimensions.dart';
 
 import '../../app_state.dart';
-import '../../utils/Colors.dart';
+import '../../utils/colors.dart';
 
 class WoolQuality extends StatefulWidget {
   const WoolQuality({super.key});

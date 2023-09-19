@@ -8,9 +8,14 @@ import 'package:sih1309/utils/dimensions.dart';
 import '../../../app_state.dart';
 import '../../../utils/colors.dart';
 
-class InventoryMgmnt extends StatelessWidget {
-  const InventoryMgmnt({super.key});
+class Feed extends StatefulWidget {
+  const Feed({super.key});
 
+  @override
+  State<Feed> createState() => _FeedState();
+}
+
+class _FeedState extends State<Feed> {
   Widget build(BuildContext context) {
     final appState = Provider.of<AppState>(context);
     return Scaffold(
@@ -23,7 +28,7 @@ class InventoryMgmnt extends StatelessWidget {
           ),
           toolbarHeight: Dimension.val70,
           centerTitle: true,
-          title: Text("Inventory Management",
+          title: Text("Feed",
               style: TextStyle(
                 color: Colors.black,
                 fontFamily: 'poppins',
@@ -32,7 +37,7 @@ class InventoryMgmnt extends StatelessWidget {
               )),
         ),
         body: Center(
-          child: Text("This is inventro"),
+          child: Text("This is wool quality"),
         ));
   }
 }
